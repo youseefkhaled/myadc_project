@@ -127,7 +127,7 @@ $submenu = $dept; ?>
                                         <select name="department" class="form-control" required>
                                             <option disabled selected>Choose department</option>
                                             <option value="Science">Science</option>
-                                            <option value="Humanities">Humanities</option>
+                                            <option value="IT">IT</option>
                                             <option value="Business Studies">Business Studies</option>
                                         </select>
                                     </div>

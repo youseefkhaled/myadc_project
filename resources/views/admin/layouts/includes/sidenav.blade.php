@@ -116,10 +116,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.teachers-humanities') }}"
-                                class="nav-link @if ($submenu == 'Humanities') active @endif">
+                            <a href="{{ route('admin.teachers-IT') }}"
+                                class="nav-link @if ($submenu == 'IT') active @endif">
                                 <i class="far fa-dot-circle nav-icon"></i>
-                                <p>Humanities</p>
+                                <p>IT</p>
                             </a>
                         </li>
                         <li class="nav-item">

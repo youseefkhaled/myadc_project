@@ -138,7 +138,7 @@ $cmnts_cnt = DB::table('post_comments')
                                                         <th>Biology II</th>
                                                         <th>H. Math I</th>
                                                         <th>H. Math II</th>
-                                                    @elseif ($user->department == 'Humanities')
+                                                    @elseif ($user->department == 'IT')
                                                         <th>Logic I</th>
                                                         <th>Logic II</th>
                                                         <th>Civics I</th>
@@ -179,7 +179,7 @@ $cmnts_cnt = DB::table('post_comments')
                                                             <td>{{ $xi_marks_mt->biology2 }}</td>
                                                             <td>{{ $xi_marks_mt->h_math1 }}</td>
                                                             <td>{{ $xi_marks_mt->h_math2 }}</td>
-                                                        @elseif ($user->department == 'Humanities')
+                                                        @elseif ($user->department == 'IT')
                                                             <td>{{ $xi_marks_mt->logic1 }}</td>
                                                             <td>{{ $xi_marks_mt->logic2 }}</td>
                                                             <td>{{ $xi_marks_mt->civics1 }}</td>
@@ -220,7 +220,7 @@ $cmnts_cnt = DB::table('post_comments')
                                                             <td>{{ $xi_marks_hy->biology2 }}</td>
                                                             <td>{{ $xi_marks_hy->h_math1 }}</td>
                                                             <td>{{ $xi_marks_hy->h_math2 }}</td>
-                                                        @elseif ($user->department == 'Humanities')
+                                                        @elseif ($user->department == 'IT')
                                                             <td>{{ $xi_marks_hy->logic1 }}</td>
                                                             <td>{{ $xi_marks_hy->logic2 }}</td>
                                                             <td>{{ $xi_marks_hy->civics1 }}</td>
@@ -261,7 +261,7 @@ $cmnts_cnt = DB::table('post_comments')
                                                             <td>{{ $xi_marks_fnl->biology2 }}</td>
                                                             <td>{{ $xi_marks_fnl->h_math1 }}</td>
                                                             <td>{{ $xi_marks_fnl->h_math2 }}</td>
-                                                        @elseif ($user->department == 'Humanities')
+                                                        @elseif ($user->department == 'IT')
                                                             <td>{{ $xi_marks_fnl->logic1 }}</td>
                                                             <td>{{ $xi_marks_fnl->logic2 }}</td>
                                                             <td>{{ $xi_marks_fnl->civics1 }}</td>

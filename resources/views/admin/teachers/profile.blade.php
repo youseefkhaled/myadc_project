@@ -99,40 +99,40 @@ $submenu = $teacher->department; ?>
                                     </li>
                                 </ul>
 
-                                <div class="card">
-                                    <div class="card-header attachment-block p-3">
-                                        <b>Qualifications</b>
-                                    </div>
-                                    <div class="card-body table-responsive p-0">
-                                        <table class="table table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th>Educational Qualification</th>
-                                                    <th>Certificate</th>
-                                                    <th>CV</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>{{ $teacher->edu_qualification }}</td>
-                                                    <td>
-                                                        <a href="{{ asset('images/teachers/certificate') . '/' . $teacher->edu_certificate }}"
-                                                            class="" target="blank">
-                                                            <img class="img-fluid"
-                                                                src="{{ asset('images/teachers/certificate' . '/' . $teacher->edu_certificate) }}"
-                                                                alt="certificate" style="width: 100px"></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="{{ asset('images/teachers/cv') . '/' . $teacher->cv }}"
-                                                            class="" target="blank">
-                                                            <i class="bi bi-filetype-pdf text-danger"
-                                                                style="font-size: 50px; font-weight:bolder"></i></a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+{{--                                <div class="card">--}}
+{{--                                    <div class="card-header attachment-block p-3">--}}
+{{--                                        <b>Qualifications</b>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="card-body table-responsive p-0">--}}
+{{--                                        <table class="table table-bordered">--}}
+{{--                                            <thead>--}}
+{{--                                                <tr>--}}
+{{--                                                    <th>Educational Qualification</th>--}}
+{{--                                                    <th>Certificate</th>--}}
+{{--                                                    <th>CV</th>--}}
+{{--                                                </tr>--}}
+{{--                                            </thead>--}}
+{{--                                            <tbody>--}}
+{{--                                                <tr>--}}
+{{--                                                    <td>{{ $teacher->edu_qualification }}</td>--}}
+{{--                                                    <td>--}}
+{{--                                                        <a href="{{ asset('images/teachers/certificate') . '/' . $teacher->edu_certificate }}"--}}
+{{--                                                            class="" target="blank">--}}
+{{--                                                            <img class="img-fluid"--}}
+{{--                                                                src="{{ asset('images/teachers/certificate' . '/' . $teacher->edu_certificate) }}"--}}
+{{--                                                                alt="certificate" style="width: 100px"></a>--}}
+{{--                                                    </td>--}}
+{{--                                                    <td>--}}
+{{--                                                        <a href="{{ asset('images/teachers/cv') . '/' . $teacher->cv }}"--}}
+{{--                                                            class="" target="blank">--}}
+{{--                                                            <i class="bi bi-filetype-pdf text-danger"--}}
+{{--                                                                style="font-size: 50px; font-weight:bolder"></i></a>--}}
+{{--                                                    </td>--}}
+{{--                                                </tr>--}}
+{{--                                            </tbody>--}}
+{{--                                        </table>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
                             </div>
                             <!-- /.tab-pane -->
                             <div class="tab-pane" id="edit">
@@ -177,8 +177,8 @@ $submenu = $teacher->department; ?>
                                             <select name="department" class="form-control" required>
                                                 <option value="Science" @if ($teacher->department == 'Science') selected @endif>
                                                     Science</option>
-                                                <option value="Humanities"
-                                                    @if ($teacher->department == 'Humanities') selected @endif>Humanities</option>
+                                                <option value="IT"
+                                                    @if ($teacher->department == 'IT') selected @endif>IT</option>
                                                 <option value="Business Studies"
                                                     @if ($teacher->department == 'Business Studies') selected @endif>Business Studies
                                                 </option>

@@ -84,7 +84,7 @@ class RoutineXIIController extends Controller
                 'sc1_30' => $request->sc1_30
             ];
         }
-        else if($request->dept == 'humanities') {
+        else if($request->dept == 'IT') {
             $data = [
                 'hum10_30' => $request->hum10_30,
                 'hum11_15' => $request->hum11_15,

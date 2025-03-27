@@ -1,4 +1,4 @@
-<div id="{{ 'Humanities' . $item->id . 'modal' }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div id="{{ 'IT' . $item->id . 'modal' }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true" class="modal fade text-left" data-backdrop="static" data-keyboard="false">
     <div role="document" class="modal-dialog  modal-dialog-centered modal-lg">
         <div class="modal-content">

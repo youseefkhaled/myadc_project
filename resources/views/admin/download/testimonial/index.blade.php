@@ -67,7 +67,7 @@ $submenu = 'Testimonial'; ?>
                                 <select name="group" id="" class="form-control" required>
                                     <option disabled selected>choose group</option>
                                     <option value="Science">Science</option>
-                                    <option value="Humanities">Humanities</option>
+                                    <option value="IT">IT</option>
                                     <option value="Business Studies">Business Studies</option>
                                 </select>
                             </div>

@@ -19,10 +19,10 @@ class DeptTeachersController extends Controller
         return view('admin.teachers.teachers_dept', compact('teacher', 'dept'));
     }
 
-    public function humanities()
+    public function IT()
     {
-        $teacher = DB::table('teachers')->where('department', 'Humanities')->get();
-        $dept = 'Humanities';
+        $teacher = DB::table('teachers')->where('department', 'IT')->get();
+        $dept = 'IT';
         return view('admin.teachers.teachers_dept', compact('teacher', 'dept'));
     }
 

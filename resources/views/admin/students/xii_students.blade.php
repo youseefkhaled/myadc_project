@@ -94,7 +94,7 @@ $submenu = 'XII'; ?>
 {{--                                    </button>--}}
 
 {{--                                    @include('admin.students.exam_modals.science')--}}
-{{--                                    @include('admin.students.exam_modals.humanities')--}}
+{{--                                    @include('admin.students.exam_modals.IT')--}}
 {{--                                    @include('admin.students.exam_modals.business')--}}
 {{--                                </td>--}}
 
@@ -176,7 +176,7 @@ $submenu = 'XII'; ?>
                                         <label for=" department">Department</label>
                                         <select name="department" class="form-control">
                                             <option value="Science">Science</option>
-                                            <option value="Humanities">Humanities</option>
+                                            <option value="IT">IT</option>
                                             <option value="Business">Business</option>
                                         </select>
                                     </div>
@@ -334,7 +334,7 @@ $submenu = 'XII'; ?>
                                         <label for=" ssc_dept">SSC department</label>
                                         <select name="ssc_dept" class="form-control">
                                             <option value="Science">Science</option>
-                                            <option value="Humanities">Humanities</option>
+                                            <option value="IT">IT</option>
                                             <option value="Business">Business</option>
                                             <option value="Vocational">Vocational</option>
                                         </select>

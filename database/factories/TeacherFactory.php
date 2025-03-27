@@ -16,7 +16,7 @@ class TeacherFactory extends Factory
      */
     public function definition()
     {
-        $depts = ['Science', 'Humanities', 'Business'];
+        $depts = ['Science', 'IT', 'Business'];
         $dept_key = array_rand($depts);
 
         $position = ['Professor', 'Assistant Professor', 'Lecturer'];

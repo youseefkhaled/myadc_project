@@ -72,13 +72,23 @@ Route::group(['middleware' => 'auth', 'middleware' => 'verified'], function() {
     //__Videos route
     Route::get('/videos', [UserController::class, 'videos'])->name('videos');
 
-
+    //__Routine route
+    Route::get('/routines', [UserController::class, 'routines'])->name('routines');
+    Route::get('/routines/export/{class}/{dept}', [UserController::class, 'export'])->name('routines.export');
 
     //__Teachers and students info route
     Route::get('/teacher_student_info', [UserController::class, 'teacher_student_view'])->name('teacher_student_info');
 
 });
 
+
+// __Admission routes
+Route::get('/admission/procedure', function () {
+    return view('admission.admission_procedure');
+})->name('admission.procedure');
+
+Route::post('/student/admission/store', [AdmissionController::class, 'store'])->name('student.admission.store');
+Route::post('/student/admission/verify', [AdmissionController::class, 'verify'])->name('student.admission.verify');
 
 
 require __DIR__.'/auth.php';
@@ -104,21 +114,46 @@ Route::group(['middleware' => 'admin'], function() {
     // __Notice routes
     Route::resource('/admin/notice', NoticeController::class);
 
+    // __Routine routes
+    Route::resource('/admin/routines_xi', RoutineXIController::class);
+    Route::resource('/admin/routines_xii', RoutineXIIController::class);
 
     // __Student routes
     Route::resource('/admin/students', AllStudentsController::class);
     Route::resource('/admin/students_xi', XIStudentsController::class);
     Route::resource('/admin/students_xii', XIIStudentsController::class);
     Route::resource('/admin/students_old', OldStudentsController::class);
+    Route::resource('/admin/hsc_examinee', HscExamineeController::class);
     Route::get('/admin/students/transfer-class/{id}', [AllStudentsController::class, 'transfer_class'])->name('students.transfer-class');
 
+    //__HSC routes
+    Route::resource('/admin/hsc', HscController::class);
+    Route::get('/admin/hsc_prev', [HscController::class, 'index_prev'])->name('hsc.previous');
+
+    //__Exam routes
+    Route::post('/admin/students/exam/mt/update/{class}/{id}', [ExamController::class, 'update_mt'])->name('admin.students.exam.mt.update');
+    Route::post('/admin/students/exam/hy/update/{class}/{id}', [ExamController::class, 'update_hy'])->name('admin.students.exam.hy.update');
+    Route::post('/admin/students/exam/fnl/update/{class}/{id}', [ExamController::class, 'update_fnl'])->name('admin.students.exam.fnl.update');
 
     // __Teacher routes
     Route::resource('/admin/teachers', TeachersController::class);
     Route::get('/admin/teachers-science', [DeptTeachersController::class, 'science'])->name('admin.teachers-science');
-    Route::get('/admin/teachers-humanities', [DeptTeachersController::class, 'humanities'])->name('admin.teachers-humanities');
+    Route::get('/admin/teachers-IT', [DeptTeachersController::class, 'IT'])->name('admin.teachers-IT');
     Route::get('/admin/teachers-business', [DeptTeachersController::class, 'business'])->name('admin.teachers-business');
 
+    // __Admission routes
+    Route::resource('/admin/student/admission', AdmissionController::class);
+    Route::resource('/admin/admission/security_code', SecurityCodeController::class);
+    Route::get('/admin/admission/confirmation/{id}', [AdmissionController::class, 'confirmation'])->name('admin.admission.confirmation');
 
+    // __Download routes
+    Route::get('/admin/students/idcard/generate/{id}', [IDcardController::class, 'generate'])->name('admin.students.idcard.generate');
+    Route::get('/admin/teachers/idcard/generate/{id}', [IDcardController::class, 'teachers_id_generate'])->name('admin.teachers.idcard.generate');
+
+    Route::get('/admin/download/testimonial', [TestimonialController::class, 'index'])->name('admin.download.testimonial');
+    Route::post('/admin/download/testimonial/generate', [TestimonialController::class, 'generate'])->name('admin.download.testimonial.generate');
+
+    Route::get('/admin/download/tc', [TransCertController::class, 'index'])->name('admin.download.tc');
+    Route::post('/admin/download/tc/generate', [TransCertController::class, 'generate'])->name('admin.download.tc.generate');
 
 });

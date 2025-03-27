@@ -12,7 +12,7 @@
 
             <div class="text-center">
                 <h1 class="text-center">IUG-IT College</h1>
-                <h5 class="my-4">Golapgonj, Sylhet</h5>
+                <h5 class="my-4">Gaza,Palestine</h5>
             </div>
             <div class="text-right" style="width: 150px;">
                 <button onclick="window.print()" class="btn btn-primary print_btn"><i class="fas fa-print"></i>

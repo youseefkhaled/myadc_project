@@ -213,8 +213,8 @@ $submenu = $item->c_class; ?>
                                             <select name="department" class="form-control">
                                                 <option value="Science" @if ($item->department == 'Science') selected @endif>
                                                     Science</option>
-                                                <option value="Humanities"
-                                                    @if ($item->department == 'Humanities') selected @endif>Humanities</option>
+                                                <option value="IT"
+                                                    @if ($item->department == 'IT') selected @endif>IT</option>
                                                 <option value="Business"
                                                     @if ($item->department == 'Business') selected @endif>
                                                     Business</option>
@@ -403,8 +403,8 @@ $submenu = $item->c_class; ?>
                                                 <option value="Science"
                                                     @if ($item->ssc_dept == 'Science') selected @endif>
                                                     Science</option>
-                                                <option value="Humanities"
-                                                    @if ($item->ssc_dept == 'Humanities') selected @endif>Humanities</option>
+                                                <option value="IT"
+                                                    @if ($item->ssc_dept == 'IT') selected @endif>IT</option>
                                                 <option value="Business"
                                                     @if ($item->ssc_dept == 'Business') selected @endif>Business</option>
                                                 <option value="Vocational"
@@ -488,7 +488,7 @@ $submenu = $item->c_class; ?>
     @endphp
 
     @include('admin.students.exam_modals.science')
-    @include('admin.students.exam_modals.humanities')
+    @include('admin.students.exam_modals.IT')
     @include('admin.students.exam_modals.business')
 
 @endsection
